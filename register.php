@@ -1,13 +1,13 @@
-  
+<?php include('server.php') ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>LOGIN</title>
-    <link rel="stylesheet" type="text/css" href="css/welcome.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <title>REGISTER</title>
+    <link rel="stylesheet" type="text/css" href="CSS/welcome.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     
   </head>
@@ -33,41 +33,30 @@
             </div>
           
          </nav>
-    <div id="login">
-        <img src="https://res.cloudinary.com/charlene04/image/upload/v1568851785/1014-512_uda4mj.png" alt="User icon">
-      <div  id="header">
-          <h2>User Log in</h2>
-          <p>Not a member? Please <a href="#" id="signup-link">sign up</a> now </p>
-          <form action="" method="POST" id="form">
-            <input type="text" name="username" placeholder="User ID">
-            <input type="password" name="pword" placeholder="********">
-            <input type="submit" value="LOGIN">
-    
-          </form>
-      </div>
-      <p>Forgot <a href="">password</a>? </p>
-      
-    </div>
+
     <div id="signup">
-      <img src="https://res.cloudinary.com/charlene04/image/upload/v1568851785/1014-512_uda4mj.png" alt="User icon">
         <div  id="header">
             <h2>Create an account</h2>
         
-            <form action="" method="POST" id="form">
-              <input type="text" name="username" placeholder="User ID"  >
+            <form action="register.php" method="POST" id="form">
+            <?php include('errors.php'); ?>
+              <input type="text" name="username" placeholder="User ID">
               <input type="email" name="email" placeholder="Email Address">
-              <input type="password" name="pword" placeholder="********">
+              <input type="password" name="password_1" placeholder="********">
+              <input type="password" name="password_2" placeholder="confirm password">
               <input type="submit" value="REGISTER">
       
             </form>
         </div>
-        <p>Already a member? <a href="#" id="login-link">Login</a></p>
+        <p>Already a member? <a href="login.php" id="login-link">Login</a></p>
         
-      </div>
-      
-<script type="text/javascript" src="jquery-2.1.4.js"></script>
-<script type="text/javascript" src="bootstrap.js"></script>
-  <script type="text/javascript" src="script.js"></script>
+    </div>
+
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   </body>
 
 
